@@ -4,3 +4,5 @@ Interests include space, solar systems, gravity, c waves, electrogravitics, comp
 Physics Advisor, Brandon Day
 experience in scientific computing: somewhat
 experience in Linux/Unix (or macOS): somewhat
+
+Using a Macbook, Mac OS High Sierra, Vs 10.13.6
