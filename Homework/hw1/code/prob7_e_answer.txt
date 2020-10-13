@@ -1,0 +1,5 @@
+awk '{print $1}' roster_sort_lastName_noDuplicate.txt | grep 'C\|D' -c
+
+4
+
+side note - if I dont include -c at the end then the output will be the 4  lastt names, 2 of which start with C, and the other two start with D

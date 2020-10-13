@@ -1,0 +1,3 @@
+wc -l < roster_sort_lastName_noDuplicate.txt > prob7_d_answer.txt
+     
+24
