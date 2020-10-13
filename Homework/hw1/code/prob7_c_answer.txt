@@ -1,0 +1,3 @@
+
+
+sort roster.txt | uniq > roster_sort_lastName_noDuplicate.txt
