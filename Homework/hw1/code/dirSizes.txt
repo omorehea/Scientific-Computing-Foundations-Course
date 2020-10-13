@@ -1,0 +1,3 @@
+1000	moreheadowen-am129-fall2020
+800	moreheadowen-am129-fall2020/.git
+592	moreheadowen-am129-fall2020/.git/objects

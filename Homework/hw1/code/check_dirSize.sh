@@ -7,5 +7,7 @@
 
 cd ../../../../
 du moreheadowen-am129-fall2020 | sort -g -r | head -n 3 > dirSizes.txt
+mv dirSizes.txt moreheadowen-am129-fall2020/Homework/hw1/code
+
 du moreheadowen-am129-fall2020 | sort -g -r
 
