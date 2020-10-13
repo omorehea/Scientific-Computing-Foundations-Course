@@ -1,0 +1,17 @@
+export MY_PATH="/Users/owenmorehead/moreheadowen-am129-fall2020"
+
+alias wcl='wc -l'
+
+##above is for problem 8
+
+function pwd_up() {
+cd $(printf "%0.0s../" $(seq 1 $1)) && pwd;
+cd ~-
+}
+
+##cd takes us 'up' N levels to directory, then pwd shows directory path, then return back to directory we started in
+
+alias 'pwd..'='pwd_up'
+
+##above is for problem 9
+

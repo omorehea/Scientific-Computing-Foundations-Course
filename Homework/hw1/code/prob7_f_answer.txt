@@ -1,3 +1,9 @@
-awk '{print $1}' roster_sort_lastName_noDuplicate.txt | grep 'G\|S'
+grep "^G\|^S" roster_sort_lastName_noDuplicate.txt | sort -r
 
-*Was not fully able to complete this problem. Could not get to output the entire line including first name and email. This output is only the last names that start with G or S.
+
+Seidl Christa cseidl@ucsc.edu
+Sanchez Enrique enrsanch@ucsc.edu
+Salak Dylan gsalak@ucsc.edu
+Gregorio Florencia fgregori@ucsc.edu
+Garcia Adrian agarc140@ucsc.edu
+Gan Ruoqing rgan2@ucsc.edu
