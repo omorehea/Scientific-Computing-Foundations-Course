@@ -8,8 +8,7 @@ contains
 
   !!! ==== Add your matvecprod function here ==== !!!                                                         
   function matvecprod(A,x) result(y)
-    implicit none
-    integer, parameter :: dp=kind(0.d0)   
+    implicit none   
     real(dp), intent(in) :: A(:,:)
     real(dp), intent(in) :: x(:)
     real(dp), dimension(size(A,1)) :: y

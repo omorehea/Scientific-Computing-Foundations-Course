@@ -7,7 +7,7 @@ program dft
   use dftmod
   implicit none
   ! Size of transform
-  integer, parameter :: N = 20           ! Number of grid points to use
+  integer, parameter :: N =80            ! Number of grid points to use
   ! Problem data
   real (dp) :: dx = 2*pi/N               ! Grid point spacing in physical domain
   real (dp), dimension(N) :: x, k        ! Physical domain, wave domain
