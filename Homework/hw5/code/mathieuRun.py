@@ -62,7 +62,7 @@ def plot_parsweep(N,nPlot):
     plt.plot(qRange,a(),'b-.',label='a(q)')
     plt.plot(qRange,b(),'b--',label='b(q)')
     plt.grid(True)
-    plt.title('Eigenvalues as a funciton of q',fontsize=18)
+    plt.title('Eigenvalues as a funciton of q for the Mathieu functions',fontsize=18)
     plt.xlabel('q',fontsize=14)
     plt.ylabel('Eigenvalues',fontsize=14)
     plt.legend()

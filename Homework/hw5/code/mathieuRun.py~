@@ -59,8 +59,8 @@ def plot_parsweep(N,nPlot):
     plt.plot(qRange,evals,'-k')
     a = lambda: [1 + q - (1/8)*q**2 - (1/64)*q**3 for q in range(0,42,2)]
     b = lambda: [4 - (1/12)*q**2 + (5/13824)*q**4 for q in range(0,42,2)]
-    plt.plot(qRange,a(),color='b',linestyle='--',dashes=(5,3),label='a(q)')
-    plt.plot(qRange,b(),color='b',linestyle='--',dashes=(5,10),label='b(q)')
+    plt.plot(qRange,a(),'b-.',label='a(q)')
+    plt.plot(qRange,b(),'b--',label='b(q)')
     plt.grid(True)
     plt.title('Eigenvalues as a funciton of q',fontsize=18)
     plt.xlabel('q',fontsize=14)
