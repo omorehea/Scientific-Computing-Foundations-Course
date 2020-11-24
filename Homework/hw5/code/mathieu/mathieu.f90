@@ -19,7 +19,7 @@ program mathieu
   ! Loop variables
   integer :: i,j
   ! Read in the input file
-  call problemsetup_Init('mathieu.init.bak')
+  call problemsetup_Init('mathieu.init')
   ! Set local variables
   lwork = 8*Npts
   dx = 2*pi/Npts
