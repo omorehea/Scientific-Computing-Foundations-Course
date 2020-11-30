@@ -12,7 +12,7 @@
 
 #include "SparseMat.h"
 
-#define ITER_MAX 100000
+#define ITER_MAX 10000000
 #define THRESH 1.e-6
 #define BIAS 1.e-3
 
