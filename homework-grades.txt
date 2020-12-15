@@ -4,3 +4,4 @@ hw3: 25/25
 hw4: 25/25
 hw5: 24/25
     - Zoom into points of interest in figure
+hw6: 25/25
