@@ -1,0 +1,4 @@
+num_masses 32
+nonlinear_factor -3.2
+correction_factor 0.5
+run_name fput_32_-3.2_0.5

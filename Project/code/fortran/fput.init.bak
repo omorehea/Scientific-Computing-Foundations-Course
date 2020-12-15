@@ -1,0 +1,4 @@
+num_masses 16
+nonlinear_factor -1.6
+correction_factor 0.5
+run_name fput_16_-1.6_0.5
