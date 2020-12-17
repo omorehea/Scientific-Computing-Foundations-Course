@@ -77,7 +77,7 @@ def n_1_plot_pta(C):
     plt.plot(timerange2new,one_mass_soln(),'b-.',label='analytical solution')
     #Plotting construction and labels below
     plt.grid(True)
-    plt.title('Numerical vs Analytical Solution for N = 1, C = 0.1',fontsize=18)
+    plt.title('Numerical vs Analytical Solution for N = 1, C = %.2f'%(C),fontsize=25)
     plt.xlabel('t',fontsize=14)
     plt.ylabel('Amplitude',fontsize=14)
     plt.legend(loc='upper right')
@@ -104,7 +104,7 @@ def plot_n_sweep_ptb(C):
     Nrange = np.array([8,16,32])                   #three values of N to test
     fig, axs = plt.subplots(3,2,figsize=(45,20)) 
     plt.subplots_adjust(hspace=0.4,wspace=0.4)
-    fig.suptitle(r"Pt B,  $\alpha = 0$",fontsize='18')
+    fig.suptitle(r"Pt B,  $\alpha = 0$",fontsize=25)
 
     for idx, n in enumerate(Nrange):
 
@@ -133,11 +133,11 @@ def plot_n_sweep_ptb(C):
         xtick = np.linspace(0,10*np.pi,11)   #11 steps in linspace because we include both end values           
         xlabels = ['0',r'$\pi$',r'$2\pi$',r'$3\pi$',r'$4\pi$',r'$5\pi$',\
                        r'$6\pi$',r'$7\pi$',r'$8\pi$',r'$9\pi$',r'$10\pi$']
-        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n))
+        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n),fontsize=20)
         axs[idx,0].set(xlabel='ith mass',ylabel='Displacement')
         axs[idx,0].legend(fontsize='medium',loc='upper right')
         axs[idx,1].plot(timerange,timesolns[0,:])               #subplots of time solution data for mass N/2
-        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n))
+        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n),fontsize=20)
         axs[idx,1].set(xlabel='t',ylabel='Amplitude')
         axs[idx,1].set_xticks(xtick)
         axs[idx,1].set_xticklabels(xlabels)
@@ -159,7 +159,7 @@ def plot_n_sweep_ptc(C):
     Nrange = np.array([8,16,32])
     fig, axs = plt.subplots(3,2,figsize=(45,20))
     plt.subplots_adjust(hspace=0.4,wspace=0.4)
-    fig.suptitle(r"Pt C,  $\alpha = N/10$,  C = %.2f"%(C),fontsize='18')
+    fig.suptitle(r"Pt C,  $\alpha = N/10$,  C = %.2f"%(C),fontsize=25)
     xtick = np.linspace(0,10*np.pi,11)   #11 steps in linspace because we include both end values                           
     xlabels = ['0',r'$\pi$',r'$2\pi$',r'$3\pi$',r'$4\pi$',r'$5\pi$',\
                    r'$6\pi$',r'$7\pi$',r'$8\pi$',r'$9\pi$',r'$10\pi$'] #x axis labels for time plots
@@ -185,11 +185,11 @@ def plot_n_sweep_ptc(C):
            # print(mass_xdata.shape)
             axs[idx,0].plot(mass_xdata,mass_ydata[0,:],label=l)
 
-        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n))
+        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n),fontsize=20)
         axs[idx,0].set(xlabel='ith mass',ylabel='Displacement')
         axs[idx,0].legend(fontsize='medium',loc='upper right')
         axs[idx,1].plot(timerange,timesolns[0,:])
-        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n))
+        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n),fontsize=20)
         axs[idx,1].set(xlabel='t',ylabel='Amplitude')
         axs[idx,1].set_xticks(xtick)
         axs[idx,1].set_xticklabels(xlabels)
@@ -215,7 +215,7 @@ def plot_n_sweep_pte(C):
     Nrange = np.array([8,16,32])
     fig, axs = plt.subplots(3,2,figsize=(45,20))
     plt.subplots_adjust(hspace=0.4,wspace=0.4)
-    fig.suptitle(r"Pt E,  $\alpha = -N/10$,  C = %.2f"%(C),fontsize='18')
+    fig.suptitle(r"Pt E,  $\alpha = -N/10$,  C = %.2f"%(C),fontsize=25)
     xtick = np.linspace(0,10*np.pi,11)   #11 steps in linspace because we include both end values                   
     xlabels = ['0',r'$\pi$',r'$2\pi$',r'$3\pi$',r'$4\pi$',r'$5\pi$',\
                    r'$6\pi$',r'$7\pi$',r'$8\pi$',r'$9\pi$',r'$10\pi$'] #x axis labels for time plots                    
@@ -239,11 +239,11 @@ def plot_n_sweep_pte(C):
            # print(mass_xdata.shape)
             axs[idx,0].plot(mass_xdata,mass_ydata[0,:],label=l)
 
-        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n))
+        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n),fontsize=17)
         axs[idx,0].set(xlabel='ith mass',ylabel='Displacement')
         axs[idx,0].legend(fontsize='medium',loc='upper right')
         axs[idx,1].plot(timerange,timesolns[0,:])
-        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n))
+        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n),fontsize=17)
         axs[idx,1].set(xlabel='t',ylabel='Amplitude')
         axs[idx,1].set_xticks(xtick)
         axs[idx,1].set_xticklabels(xlabels)

@@ -77,7 +77,7 @@ def n_1_plot_pta(C):
     plt.plot(timerange2new,one_mass_soln(),'b-.',label='analytical solution')
     #Plotting construction and labels below
     plt.grid(True)
-    plt.title('Numerical vs Analytical Solution for N = 1, C = 0.1',fontsize=18)
+    plt.title('Numerical vs Analytical Solution for N = 1, C = %.2f'%(C),fontsize=25)
     plt.xlabel('t',fontsize=14)
     plt.ylabel('Amplitude',fontsize=14)
     plt.legend(loc='upper right')
@@ -104,7 +104,7 @@ def plot_n_sweep_ptb(C):
     Nrange = np.array([8,16,32])                   #three values of N to test
     fig, axs = plt.subplots(3,2,figsize=(45,20)) 
     plt.subplots_adjust(hspace=0.4,wspace=0.4)
-    fig.suptitle(r"Pt B,  $\alpha = 0$",fontsize='18')
+    fig.suptitle(r"Pt B,  $\alpha = 0$",fontsize=25)
 
     for idx, n in enumerate(Nrange):
 
@@ -133,11 +133,11 @@ def plot_n_sweep_ptb(C):
         xtick = np.linspace(0,10*np.pi,11)   #11 steps in linspace because we include both end values           
         xlabels = ['0',r'$\pi$',r'$2\pi$',r'$3\pi$',r'$4\pi$',r'$5\pi$',\
                        r'$6\pi$',r'$7\pi$',r'$8\pi$',r'$9\pi$',r'$10\pi$']
-        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n))
+        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n),fontsize=20)
         axs[idx,0].set(xlabel='ith mass',ylabel='Displacement')
         axs[idx,0].legend(fontsize='medium',loc='upper right')
         axs[idx,1].plot(timerange,timesolns[0,:])               #subplots of time solution data for mass N/2
-        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n))
+        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n),fontsize=20)
         axs[idx,1].set(xlabel='t',ylabel='Amplitude')
         axs[idx,1].set_xticks(xtick)
         axs[idx,1].set_xticklabels(xlabels)
@@ -159,7 +159,7 @@ def plot_n_sweep_ptc(C):
     Nrange = np.array([8,16,32])
     fig, axs = plt.subplots(3,2,figsize=(45,20))
     plt.subplots_adjust(hspace=0.4,wspace=0.4)
-    fig.suptitle(r"Pt C,  $\alpha = N/10$,  C = %.2f"%(C),fontsize='18')
+    fig.suptitle(r"Pt C,  $\alpha = N/10$,  C = %.2f"%(C),fontsize=25)
     xtick = np.linspace(0,10*np.pi,11)   #11 steps in linspace because we include both end values                           
     xlabels = ['0',r'$\pi$',r'$2\pi$',r'$3\pi$',r'$4\pi$',r'$5\pi$',\
                    r'$6\pi$',r'$7\pi$',r'$8\pi$',r'$9\pi$',r'$10\pi$'] #x axis labels for time plots
@@ -185,11 +185,11 @@ def plot_n_sweep_ptc(C):
            # print(mass_xdata.shape)
             axs[idx,0].plot(mass_xdata,mass_ydata[0,:],label=l)
 
-        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n))
+        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n),fontsize=20)
         axs[idx,0].set(xlabel='ith mass',ylabel='Displacement')
         axs[idx,0].legend(fontsize='medium',loc='upper right')
         axs[idx,1].plot(timerange,timesolns[0,:])
-        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n))
+        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n),fontsize=20)
         axs[idx,1].set(xlabel='t',ylabel='Amplitude')
         axs[idx,1].set_xticks(xtick)
         axs[idx,1].set_xticklabels(xlabels)
@@ -215,7 +215,7 @@ def plot_n_sweep_pte(C):
     Nrange = np.array([8,16,32])
     fig, axs = plt.subplots(3,2,figsize=(45,20))
     plt.subplots_adjust(hspace=0.4,wspace=0.4)
-    fig.suptitle(r"Pt E,  $\alpha = -N/10$,  C = %.2f"%(C),fontsize='18')
+    fig.suptitle(r"Pt E,  $\alpha = -N/10$,  C = %.2f"%(C),fontsize=25)
     xtick = np.linspace(0,10*np.pi,11)   #11 steps in linspace because we include both end values                   
     xlabels = ['0',r'$\pi$',r'$2\pi$',r'$3\pi$',r'$4\pi$',r'$5\pi$',\
                    r'$6\pi$',r'$7\pi$',r'$8\pi$',r'$9\pi$',r'$10\pi$'] #x axis labels for time plots                    
@@ -239,11 +239,11 @@ def plot_n_sweep_pte(C):
            # print(mass_xdata.shape)
             axs[idx,0].plot(mass_xdata,mass_ydata[0,:],label=l)
 
-        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n))
+        axs[idx,0].set_title('Snapshot of solution at specified time values for N = %.2f'%(n),fontsize=17)
         axs[idx,0].set(xlabel='ith mass',ylabel='Displacement')
         axs[idx,0].legend(fontsize='medium',loc='upper right')
         axs[idx,1].plot(timerange,timesolns[0,:])
-        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n))
+        axs[idx,1].set_title('Time solutions for the mass i = %.2f for N = %.2f'%(n/2,n),fontsize=17)
         axs[idx,1].set(xlabel='t',ylabel='Amplitude')
         axs[idx,1].set_xticks(xtick)
         axs[idx,1].set_xticklabels(xlabels)
@@ -269,24 +269,23 @@ def modal_decomp(C):
         alpha = n/10
         T = np.zeros([len(Mrange),n])
         fname = 'fortran/data/fput_' + str(n) + '_' + str(alpha) + '_' + str(C) + '.dat'
-        data = np.loadtxt(fname)
-        print("Shape of data is:", data.shape)
+        data = np.loadtxt(fname)   
+       # print("Shape of data is:", data.shape)
         alltimesolns = np.zeros([n,len(data[0,:])])
-       # ndiv2 = int(n/2)
         alltimesolns = data[1:-1,:]  #all the data excluding the two dummy mass time solutions
         alltimesolns = alltimesolns.reshape(n,len(alltimesolns[0,:]))
-        print("Python extracted data shape: ", alltimesolns.shape)
-       # timerange = np.arange(0,10*np.pi,(10*np.pi)/len(timesolns[0,:]))
+       # print("Python extracted data shape: ", alltimesolns.shape)
         js = np.arange(0,n,1)
-        for i in Mrange:
+        for i in Mrange:    #Filling the matrix T
             for j in js:
                 T[i-1,j] = 2/(n + 2)*np.sin(i*np.pi*((j+1)/(n+1)))
 
-        productmatrix = np.matmul(T,alltimesolns)
+        productmatrix = np.matmul(T,alltimesolns) 
         
        # print("Shape of Matrix product T*alltimesolns is: ",productmatrix.shape)
        # print("Shape of one row of productmatrix: ",productmatrix[0,:].shape)
-        timespace = np.arange(0,10*np.pi,(10*np.pi)/len(productmatrix[0,:]))
+       # timespace = np.arange(0,10*np.pi,(10*np.pi)/len(productmatrix[0,:]))
+        timespace = np.linspace(0,10*np.pi,len(productmatrix[0,:]))
        # print("Size of timespace array: ", timespace.size)
         
         for ll,m in enumerate(Mrange):
@@ -309,19 +308,19 @@ if __name__=="__main__":
     
     C = 1.0       
     rebuild()
-    n_1_plot_pta(C)                 #Plot for part a
+   # n_1_plot_pta(C)                 #Plot for part a
  
-    C = 1.0
-    n_sweep_fput_alpha_zero(C)
-    plot_n_sweep_ptb(C)             #Plot for part b
+   # C = 1.0
+   # n_sweep_fput_alpha_zero(C)
+   # plot_n_sweep_ptb(C)             #Plot for part b
  
     C = 0.5
-    n_sweep_fput_alpha_nonzero(C)  
-    plot_n_sweep_ptc(C)             #Plot for part c
+   # n_sweep_fput_alpha_nonzero(C)  
+   # plot_n_sweep_ptc(C)             #Plot for part c
     
     n_sweep_fput_alpha_negative(C)
     plot_n_sweep_pte(C)             #Plot for part e
    
-    C = 0.5
-    modal_decomp(C)                 #Modal Decomposition Plots            
+   # C = 0.5
+   # modal_decomp(C)                 #Modal Decomposition Plots            
  
