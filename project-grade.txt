@@ -1,0 +1,12 @@
+Report: 15/15
+  Very nice write up!
+
+Fortran: 20/20
+
+Python: 15/15
+
+Extra credit: 15/15
+  As an aside, you could set the final time to be 50*pi and look at these
+  modal evolution plots to see the quasi-periodic behavior if you are curious
+
+Total: 65/50
